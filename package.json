@@ -1,0 +1,84 @@
+{
+  "name": "ts2021",
+  "version": "0.0.1",
+  "description": "TypeScript project template",
+  "main": "index.js",
+  "scripts": {
+    "fix": "eslint --fix src/",
+    "lint": "eslint src/",
+    "test": "jest src/",
+    "tsc": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/solidsnack/ts2021.git"
+  },
+  "keywords": [
+    "typescript",
+    "template",
+    "jest",
+    "eslint"
+  ],
+  "author": "jason.dusek@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/solidsnack/ts2021/issues"
+  },
+  "homepage": "https://github.com/solidsnack/ts2021#readme",
+  "devDependencies": {
+    "@types/jest": "*",
+    "@types/node": "*",
+    "@typescript-eslint/eslint-plugin": "*",
+    "@typescript-eslint/parser": "*",
+    "eslint": "*",
+    "eslint-config-prettier": "*",
+    "eslint-plugin-prettier": "*",
+    "jest": "*",
+    "prettier": "*",
+    "ts-jest": "*",
+    "ts-node": "*",
+    "typescript": "*"
+  },
+  "eslintConfig": {
+    "overrides": [{
+      "files": ["*.ts", "*.tsx"]
+    }],
+    "parser": "@typescript-eslint/parser",
+    "extends": [
+      "plugin:@typescript-eslint/recommended",
+      "plugin:prettier/recommended"
+    ],
+    "parserOptions": {
+      "ecmaVersion": 2018,
+      "sourceType": "module"
+    },
+    "rules": {
+      "max-len": [
+        2,
+        {
+          "code": 79
+        }
+      ],
+      "@typescript-eslint/no-unused-vars": [
+        "error",
+        {
+          "argsIgnorePattern": "^_",
+          "caughtErrorsIgnorePattern": "^_",
+          "varsIgnorePattern": "^_"
+        }
+      ]
+    }
+  },
+  "jest": {
+    "collectCoverage": true,
+    "coverageDirectory": "tmp/coverage",
+    "coverageProvider": "v8",
+    "preset": "ts-jest",
+    "testEnvironment": "node"
+  },
+  "prettier": {
+    "printWidth": 79,
+    "semi": false,
+    "trailingComma": "es5"
+  }
+}
